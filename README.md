@@ -6,14 +6,14 @@ Tools of stLFR(Single Tube Long Fragment Reads) data analysis
 
 stLFR FAQs is directed to bgi-MGITech_Bioinfor@genomics.cn.
 
-Download source code package from https://github.com/MGI-tech-bioinformatics/stLFR_v1
+Download source code package from https://github.com/MGI-tech-bioinformatics/stLFR_v1.1
 
 
 Download/Install
 ----------------
 Due to the size limitation of GitHub repository, followed softwares need to be installed to the specific directory (stLFR_v1/tools):
 
-1. HapCUT2-master; 2. R-3.2.3; 3. bam2depth; 4. cnv; 5. gatk-4.0.3.0;
+1. HapCUT2-master; 2. R-3.5.2; 3. bam2depth; 4. cnv; 5. gatk-4.0.3.0;
 
 6. jre1.8.0_101; 7. python3; 8. vcftools; 9. Python-2.7.14; 10. SOAPnuke-1.5.6; 
 
@@ -21,9 +21,15 @@ Due to the size limitation of GitHub repository, followed softwares need to be i
 
 Furthermore, you need to download the following database to the specific directory:
 
-1. hg19.fa (stLFR_v1/db/hg19);
+1. hg19.fa (stLFR_v1.1/db/reference/hg19);
 
-2. hg19.dbsnp.vcf (stLFR_v1/db/dbsnp).
+2. hg19.dbsnp.vcf (stLFR_v1.1/db/dbsnp);
+
+3. hs37d5.fa (stLFR_v1.1/db/reference/hs37d5);
+
+4. hs37d5.dbsnp.vcf (stLFR_v1.1/db/dbsnp);
+
+5. phased vcf (stLFR_v1.1/db/phasedvcf).
 
 Or you can download the above database and softwares from BGI Cloud Drive:
 
@@ -50,9 +56,20 @@ After all analysis processes ending, you will get these files below:
 6. Depth accumulation figure: Sequencing.depth.accumulation.pdf          
 7. GCbias metrics: *.gcbias_metrics.txt，*.gcbias_summary_metrics.txt
 8. Insertsize metrics: *.insertsize_metrics.txt
-9. Phasingcount.*.hapcut2.xls (compare with GIAB vcf)
-10. Phasingcount.*.hapcut2_SNP+InDel.xls (compare with own vcf)
+9. Phasing statistics only by SNP: Phasingcount.*.hapcut2.xls (compare with GIAB vcf)
+10. Phasing statistics by SNP and InDel: Phasingcount.*.hapcut2_SNP+InDel.xls (compare with GIAB vcf)
+11. Fragment coverage figure: *.frag_cov.pdf
+12. Fragment length distribution figure: *.fraglen_distribution_min5000.pdf
+13. Fragment per barcode distribution figure: *.frag_per_barcode.pdf
 
+Updates 
+-------
+May 6, 2019
+There are severl updates in stLFR_v1.1:
+a. Users could use an alternative reference type (hg19 or hs37d5) in stLFR_v1.1 by --ref option instead of only hg19.
+b. Updated CNV and SV detection tools are implied in stLFR_v1.1 for decreasing false discovery rate.
+c. Three figures, illustrating stLFR fragment distribution and coverage, are added.
+d. NA12878 benchmark VCF by GIAB is used for haplotype phasing error calculation.
 
 
 License
