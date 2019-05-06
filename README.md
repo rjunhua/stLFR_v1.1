@@ -42,7 +42,8 @@ Usage
 
 2. Run the automatical delivery script.
 
-        sh work.sh
+        stLFR path 
+        stLFR path --outdir result/ --ref hs37d5 --cpu 60
 
 Result
 -------
@@ -66,10 +67,10 @@ Updates
 -------
 May 6, 2019
 There are severl updates in stLFR_v1.1:
-a. Users could use an alternative reference type (hg19 or hs37d5) in stLFR_v1.1 by --ref option instead of only hg19.
-b. Updated CNV and SV detection tools are implied in stLFR_v1.1 for decreasing false discovery rate.
-c. Three figures, illustrating stLFR fragment distribution and coverage, are added.
-d. NA12878 benchmark VCF by GIAB is used for haplotype phasing error calculation.
+1. Users could use an alternative reference type (hg19 or hs37d5) in stLFR_v1.1 by --ref option instead of only hg19.
+2. Updated CNV and SV detection tools are implied in stLFR_v1.1 for decreasing false discovery rate.
+3. Three figures, illustrating stLFR fragment distribution and coverage, are added.
+4. NA12878 benchmark VCF by GIAB is used for haplotype phasing error calculation.
 
 
 License
