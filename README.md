@@ -66,6 +66,7 @@ After all analysis processes ending, you will get these files below:
 Updates 
 -------
 May 6, 2019
+
 There are severl updates in stLFR_v1.1:
 1. Users could use an alternative reference type (hg19 or hs37d5) in stLFR_v1.1 by --ref option instead of only hg19.
 2. Updated CNV and SV detection tools are implied in stLFR_v1.1 for decreasing false discovery rate.
